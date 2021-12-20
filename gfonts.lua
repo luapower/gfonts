@@ -103,7 +103,7 @@ function get_fonts(use_bundle)
 		end
 		if not fonts then
 			fonts = parse_metadata()
-			pp.save(mcache, fonts)
+			assert(pp.save(mcache, fonts))
 		end
 	end
 	return fonts
